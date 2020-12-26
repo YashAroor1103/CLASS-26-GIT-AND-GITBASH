@@ -15,10 +15,11 @@ function setup(){
     engine = Engine.create();
     world = engine.world;
 
-
+// creating ground and platform
     ground = new Ground(600,height,1200,20);
     platform = new Ground(150, 305, 300, 170);
 
+    //a set of objects 
     box1 = new Box(700,320,70,70);
     box2 = new Box(920,320,70,70);
     pig1 = new Pig(810, 350);
@@ -34,6 +35,7 @@ function setup(){
     log4 = new Log(760,120,150, PI/7);
     log5 = new Log(870,120,150, -PI/7);
 
+    //creating a bird
     bird = new Bird(100,100);
 
 }
@@ -44,6 +46,8 @@ function draw(){
     console.log(box2.body.position.x);
     console.log(box2.body.position.y);
     console.log(box2.body.angle);
+
+    //displaying the objects
     box1.display();
     box2.display();
     ground.display();
